@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Hello JSF 2.3</title>
+        <style>
+            .col-1 { text-align: right; }
+            .col-2 { font-weight: bold; }
+        </style>
+    </h:head>
+    <h:body>
+        <h3>Hello from JSF 2.3!</h3>
+
+        <h:panelGrid columns="2" columnClasses="col-1, col-2">
+            <h:outputText value="Specification:"/>
+            <h:outputText value="#{sampleBean.specTitle}"/>
+
+            <h:outputText value="Specification version:"/>
+            <h:outputText value="#{sampleBean.specVersion}"/>
+
+            <h:outputText value="Implementation:"/>
+            <h:outputText value="#{sampleBean.implTitle}"/>
+
+            <h:outputText value="Implementation version:"/>
+            <h:outputText value="#{sampleBean.implVersion}"/>
+        </h:panelGrid>
+
+        <p>CDI injection support: <b>#{sampleBean.facesContextValue}</b></p>
+        <p>Running on: <b>#{application.serverInfo}</b></p>
+    </h:body>
+</html>
